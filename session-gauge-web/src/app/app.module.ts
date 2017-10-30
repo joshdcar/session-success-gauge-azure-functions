@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { WebCamComponent } from 'ack-angular-webcam';
-import {NgxChartsModule} from '@swimlane/ngx-charts';
+import { NgxChartsModule} from '@swimlane/ngx-charts';
 
 @NgModule({
   declarations: [

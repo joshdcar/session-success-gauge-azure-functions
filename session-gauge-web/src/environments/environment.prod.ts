@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: false,
+  functionEndPoint: 'http://localhost:7071/api/SessionAttendeePhotos/api/SessionAttendeePhotos'
 };

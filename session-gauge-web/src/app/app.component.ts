@@ -15,7 +15,17 @@ export class AppComponent {
   title = 'app';
 
   public webcam;
-  options: any;
+  options: any = {
+    audio: false,
+    video: false,
+    width: 375,
+    height: 240,
+    fallbackMode: 'callback',
+    fallbackSrc: 'jscam_canvas_only.swf',
+    fallbackQuality: 85,
+    cameraType: 'front' || 'back'
+  };
+
   public imageSnapshot;
   active: boolean;
 
@@ -64,9 +74,9 @@ export class AppComponent {
 
   postPhoto(formData: any) {
 
-    const config = {
+    const config: any = {
       method: 'post',
-      url: environment 'http://localhost:7071/api/SessionAttendeePhotos/api/SessionAttendeePhotos', 
+      url: environment.functionEndPoint,
       body: formData
     };
 
@@ -80,7 +90,7 @@ export class AppComponent {
 
     const config = {
       method: 'get',
-      url: 'http://localhost:7071/api/SessionAttendeePhotos/api/SessionAttendeePhotos' //
+      url: environment.functionEndPoint
     };
 
     const request = new Request(config);
