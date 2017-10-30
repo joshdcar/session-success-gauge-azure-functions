@@ -1,0 +1,115 @@
+
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Session Success Analyzer</a>
+      </div>
+      
+    </div>
+  </nav>
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 col-md-offset-1" style="padding-top:15px">
+            <h4>Live Feed</h4>
+            <ack-webcam [(ref)]="webcam" 
+              [options]="options" 
+              (onSuccess)="onCamSuccess($event)" 
+              (onError)="onCamError($event)"></ack-webcam>
+        </div>
+        <div class="col-md-5 col-md-offset-1" style="padding-top:15px">
+            <h4>Most Recent Snapshot</h4>
+           <img src="{{imageSnapshot }}" class="img-fluid" style="max-height:240px" >
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2" style="text-align:center">
+          <button class="btn btn-primary" (click)="takeSnapshot()">Analyze Single Snapshot</button>
+          <button class="btn btn-primary" (click)="startRecording()">Start Analyzing Session</button>
+          <button class="btn btn-primary" (click)="stopRecording()">Stop Analyzing Session</button>
+          <h2 *ngIf="active" class="blink_me">Analyzing...</h2>
+      </div>
+      <div>
+          
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div class="container">
+      <div class="row">
+      <div class="offset-md-3"></div>
+      <div class="col-md-8">
+          <ngx-charts-gauge
+          [view]="view"
+          [scheme]="colorScheme"
+          [results]="data"
+          [min]="0"
+          [max]="100"
+          [angleSpan]="240"
+          [startAngle]="-120"
+          [units]="'Impressions'"
+          [bigSegments]="10"
+          [smallSegments]="5"
+          (select)="onSelect($event)">
+        </ngx-charts-gauge>
+      </div>
+      <div class="col-md-1">
+        <div>
+            <div class="impression-type-key" style="background-color:#ed0e0e"></div>
+            <h4>Anger</h4>
+        </div>
+          
+        <div>
+            <div class="impression-type-key" style="background-color:#ed720d"></div>
+            <h4>Contempt</h4>
+        </div>
+        <div>
+            <div class="impression-type-key" style="background-color:#6d401b"></div>
+            <h4>Disgust</h4>
+        </div>
+        <div>
+            <div class="impression-type-key" style="background-color:#f2ee21"></div>
+            <h4>Fear</h4>
+        </div>
+      </div>   
+      <div class="col-md-1">
+          <div>
+              <div class="impression-type-key" style="background-color:#15af39"></div>
+              <h4>Happiness</h4>
+          </div>
+          <div>
+              <div class="impression-type-key" style="background-color:#1772c1"></div>
+              <h4>Neutral</h4>
+          </div>
+          <div>
+              <div class="impression-type-key" style="background-color:#8816c1"></div>
+              <h4>Sadness</h4>
+          </div>
+          <div>
+              <div class="impression-type-key" style="background-color:#c115a4"></div>
+              <h4>Suprise</h4>
+          </div>
+        </div>   
+    </div>
+
+    <hr>
+
+    <footer>
+      <p>Josh Carlisle - joshcarlisle.io , @joshcarlisle</p>
+    </footer>
+  </div> 
+
+
+
+
+

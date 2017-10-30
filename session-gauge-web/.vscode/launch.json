@@ -1,0 +1,34 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+        {
+            "name": "Launch Chrome with ngCli@4200",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:4200/",
+            "sourceMaps": true,
+            "webRoot": "${workspaceRoot}/src",
+            "sourceMapPathOverrides": {
+                 "webpack:///C:*":"C:/*"
+             },
+             "userDataDir": "C:\\temp\\chromeDummyDir",
+             "runtimeArgs": [
+                "--disable-session-crashed-bubble",
+                "--disable-infobars"
+            ]
+        },
+        {
+            "name": "Attach to Chrome, with sourcemaps",
+            "type": "chrome",
+            "request": "attach",
+            "port": 9222,
+            "sourceMaps": true,
+            /*"diagnosticLogging": true,*/
+            "webRoot": "${workspaceRoot}/src",
+            "url": "http://localhost:4200/*",
+            "sourceMapPathOverrides": {
+                 "webpack:///C:*":"C:/*"
+             }
+        }
+	]
+}

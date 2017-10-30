@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+
+.impression-type-key {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #000;
+}
+
+.blink_me {
+    animation: blinker 2s linear infinite;
+  }
+  
+  @keyframes blinker {  
+    50% { opacity: 0; }
+  }
