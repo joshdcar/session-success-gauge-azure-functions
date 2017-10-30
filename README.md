@@ -1,5 +1,5 @@
 # Session Success Analyzer - Azure Functions Demo
-
+![Session Success Analyzer](https://github.com/joshdcar/session-success-gauge-azure-functions/blob/master/session_success_analyzer_app.png "Session Success Analyzer")
 The Session Success Analyzer is just a fun project I use to demo some of the capabilities of Azure Functions. The application attempts to analyze your session attendees facial expressions to gauge their response based on emotional analysis of their faces done by Azure Cognitive Services.  
 
 Some of the concepts that it covers include:
