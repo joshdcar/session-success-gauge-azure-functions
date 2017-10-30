@@ -7,14 +7,14 @@ Some of the concepts that it covers include:
 - Working with input and output bindings
 - Examples of bindings that facilitate easier unit testing
 - Dynamic Binding Parameters (appsettings, new-guid, etc)
-- Making use of Bindings to save liens of code (e.g. working with Tables, Blobs, Queues through Binding Inputs/outputs
+- Making use of Bindings to save lines of code (e.g. working with Tables, Blobs, Queues through Binding Inputs/outputs)
 - Visual Studio Azure Function Development Experience
 
 ## Do you want to actually use this for your session?
 I plan to build on the demo nature of this project but I do not intend to support it as a standalone app. I also intend to build on the front end app to help cover some common scenerios (e.g. changing which camera, how often photos are submitted, etc) Saying that if you would like to use it a few suggestions:
 
-- Make sure your audience knows you are taking photos. I've used this on two occasions and the audience recognized the fun\utility of it but some might now.
-- Use a high quality external camera.The built in web cameras don't typically have the resolution required combined with the small faces of a wide angle to provide good analysis.  I've had the best success elevating the camera a bit (I'm a photographer so I used a tripod)
+- Make sure your audience knows you are taking photos. I've used this on two occasions and the audience recognized the fun\utility of it but some might not.
+- Use a high quality external camera.The built in web cameras don't typically have the resolution required combined with the small faces of a wide angle to provide good analysis.  I've had the best success elevating the camera a bit (I'm a photographer so I used a tripod) and focusing on the front rows instead of trying to get the entire audience.
 
 ## Running the project locally 
 
