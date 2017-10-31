@@ -31,7 +31,7 @@ To run locally:
 - Update the environment.ts file with the correct Azure Function endpoint you would like to target. The default is for local Azure Functions development.
 - Run the following commands:
 
-For production release:
+For local development:
 ```sh
 $ npm install
 $ ng serve (Angular CLI command to run on a local web server)
@@ -46,7 +46,7 @@ Additional optional requirements for running locally:
 This Function App consists of two functions:
 - SessionAttendeePhotos - HttpTriggers (Get/Post) for submitting photos and retrieving results
 - SessionAttendeePhotoQueue - Queue Trigger submits photos for analysis
-- 
+
 Update the local.settings.json with the correct Storage Connection Strings and Cognitive Services URL and Key. 
 
 NOTE: The only functionality that cannot be run locally is the request to the Azure Cognitive Services Emotion API. All other functionality can run 100% locally.
