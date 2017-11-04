@@ -1,10 +1,4 @@
 ﻿using Microsoft.WindowsAzure.Storage.Table;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.WindowsAzure.Storage;
 
 namespace SessionSuccessGaugeFunctions
 {
@@ -37,7 +31,7 @@ namespace SessionSuccessGaugeFunctions
 
         public int Sadness { get; set; }
 
-        public int Suprise { get; set; }
+        public int Surprise { get; set; }
        
     }
 }

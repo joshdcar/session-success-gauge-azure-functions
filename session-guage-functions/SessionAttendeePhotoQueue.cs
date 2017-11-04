@@ -9,7 +9,6 @@ using System.Configuration;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.WindowsAzure.Storage.Table;
 
 namespace SessionSuccessGaugeFunctions
 {
@@ -92,7 +91,7 @@ namespace SessionSuccessGaugeFunctions
                 result.Happiness = (int)Math.Floor(faces.Average(r => r.scores.happiness) * 100);
                 result.Neutral = (int)Math.Floor(faces.Average(r => r.scores.neutral) * 100);
                 result.Sadness = (int)Math.Floor(faces.Average(r => r.scores.sadness) * 100);
-                result.Suprise= (int)Math.Floor(faces.Average(r => r.scores.suprise) * 100);
+                result.Surprise= (int)Math.Floor(faces.Average(r => r.scores.surprise) * 100);
 
                 return result;
 

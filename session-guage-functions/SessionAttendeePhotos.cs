@@ -103,7 +103,7 @@ namespace SessionSuccessGaugeFunctions
                 data.Add(new GaugeData { name = "Happiness", value = (int)Math.Floor(results.Average(r => r.Happiness)) }); ;
                 data.Add(new GaugeData { name = "Neutral", value = (int)Math.Floor(results.Average(r => r.Neutral)) });
                 data.Add(new GaugeData { name = "Sadness", value = (int)Math.Floor(results.Average(r => r.Sadness)) });
-                data.Add(new GaugeData { name = "Suprise", value = (int)Math.Floor(results.Average(r => r.Suprise)) });
+                data.Add(new GaugeData { name = "Surprise", value = (int)Math.Floor(results.Average(r => r.Surprise)) });
             }
 
             var response = req.CreateResponse(HttpStatusCode.OK, data);
