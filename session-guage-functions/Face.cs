@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace SessionSuccessGaugeFunctions
 {
     /// <summary>
@@ -34,6 +29,6 @@ namespace SessionSuccessGaugeFunctions
         public decimal happiness { get; set; }
         public decimal neutral { get; set; }
         public decimal sadness { get; set; }
-        public decimal suprise { get; set; }
+        public decimal surprise { get; set; }
     }
 }
